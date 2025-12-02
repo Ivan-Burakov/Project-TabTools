@@ -2,18 +2,16 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
-@app.route('/home')
-def home_page():
-    return render_template('home.html')
 
 @app.route('/menu')
-@app.route('/home/menu')
+@app.route('/')
 def menu_page():
     return render_template('menu.html')
 
 
-
+@app.route('/tabs')
+def tabs_page():
+    return render_template('tabs.html')
 
 
 
